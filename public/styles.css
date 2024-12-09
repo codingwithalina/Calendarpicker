@@ -1,0 +1,105 @@
+body {
+    /* Set the background and center the content */
+    background-color: #000028; /* Deep blue background */
+    display: flex; /* Flexbox layout for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove default body margin */
+}
+
+#calendar-picker {
+    font-family: 'Hero', sans-serif; /* Custom font */
+    border: none; /* Remove border */
+    padding: 10px; /* Inner spacing */
+    width: 100%; /* Full width, limited by max-width */
+    max-width: 400px; 
+    border-radius: 10px; /* Rounded corners */
+}
+
+.calendar-header {
+    /* Header styling for navigation and month display */
+    display: flex; /* Flex layout for buttons and title */
+    justify-content: space-between; /* Space between navigation buttons */
+    align-items: center; /* Align vertically */
+    margin-bottom: 1.5em; /* Space below header */
+    padding-bottom: 0.5em; /* Space below content inside header */
+    border-bottom: 2px solid rgb(71, 0, 237); 
+    /* Bottom border for visual separation */
+}
+
+.current-month-year {
+    /* Styling for the current month and year */
+    font-size: 1.5em; /* Large font size */
+    font-weight: bold; /* Bold text */
+    color: white; /* White color */
+    text-align: center; /* Center the text */
+    padding: 10px; /* Space around the text */
+}
+
+.weekdays {
+    /* Weekday names (Mo, Tu, etc.) */
+    display: grid; /* Grid layout */
+    grid-template-columns: repeat(7, 1fr); /* 7 equal columns */
+    text-align: center; /* Center text in each column */
+    font-weight: bold; /* Bold text for weekdays */
+    margin-bottom: 10px; /* Space below weekdays */
+    font-size: 1em; /* Standard font size */
+    color: white; /* White text */
+}
+
+.calendar-days {
+    display: grid; /* Grid layout */
+    grid-template-columns: repeat(7, 1fr); /* 7 equal columns */
+    grid-gap: 0px; /* No gaps between days */
+}
+
+.calendar-days > div {
+    display: flex; /* Center content using flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center; /* Center text */
+    padding: 0.1vh; /* Small padding */
+    cursor: pointer; /* Pointer cursor for clickable days */
+    color: #00fff7; /* Default text color for days */
+    font-size: 19px; /* Font size for day numbers */
+    height: 40px; /* Height of each day box */
+}
+
+.calendar-days > div.weekend {
+    color: #0077ff; /* Blue color for weekends */
+}
+
+.calendar-days > div.today {
+    /* Highlight today's date */
+    background-color: #00fff7; /* Background color for today */
+    color: #000028; /* Text color for today */
+    font-weight: bold; /* Bold text */
+}
+
+.calendar-header button {
+    background-color: transparent; /* Transparent background */
+    border: none; /* No border */
+    color: rgb(71, 0, 237); /* Button text color */
+    cursor: pointer; /* Pointer cursor for clickable buttons */
+    font-size: 20px; /* Font size for buttons */
+    width: 40px; /* Width of buttons */
+    height: 40px; /* Height of buttons */
+}
+
+.calendar-header button:hover {
+    transform: scale(1.2); /* Scale buttons when hovered */
+    border: 3px solid rgb(132, 1, 255); /* Add a border */
+    box-shadow: 0 0 10px rgba(132, 1, 255, 0.5); /* Add a glowing effect */
+}
+
+.calendar-days > div.weekend:hover {
+    background-color: #00ffd5; /* Change background color */
+    color: var(--siemens-deep-blue); /* Change text color */
+}
+
+.calendar-days > div:hover {
+    background-color: #b7fdff; /* Light blue background */
+    color: #000028; /* Dark text color */
+    font-weight: bold; /* Bold text when hovered */
+}
