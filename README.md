@@ -11,6 +11,9 @@ A simple, interactive calendar picker implemented in HTML, CSS, and JavaScript. 
 - **Responsive Design**: Optimized for both desktop and mobile views.
 - **Hover Effects**: Interactive hover effects for better user experience.
 
+## 🚀 Demo
+![Calendar Picker Animation](Calendarpicker.gif)
+
 ## Getting Started
 
 ### Prerequisites
